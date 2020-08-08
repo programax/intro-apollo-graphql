@@ -1,0 +1,12 @@
+# declaramos un tipo objeto
+type User {
+  id: ID!
+  # un signo de admiracion indica que el campo no puede ser nulo
+  email: String!
+  friends: [User]!
+}
+
+# campos dentro del tipo Query indican operaciones de lectura
+type Query {
+  user(id: ID!): User!
+}
